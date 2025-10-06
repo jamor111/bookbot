@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 from stats import get_words, get_book_text, get_characters, get_sorted_characters
 
@@ -15,8 +16,14 @@ def main():
 
     text = get_book_text()
     result = get_words(text)
+    book = arguments[1]
+    bookname = book.split("/")
     
     
+
+    print("===================--- BOOKBOT ---===================")
+    print(f"Book name: {bookname[1][:-4]}")
+    print("=====================================================")
     print(f"Found {result} total words")
 
     get_sorted_characters()
